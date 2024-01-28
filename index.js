@@ -1870,9 +1870,9 @@ showWords(parsedData)
 
 const filterWords = (query, isWord) => parsedData.filter(({ word, definition }) => {
         if(isWord){
-            return word.includes(query);
+            return word.toLowerCase().includes(query.toLowerCase());
         } else {
-            return definition.includes(query);
+            return definition.toLowerCase().includes(query.toLowerCase());
         }
     });
 
