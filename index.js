@@ -1854,6 +1854,16 @@ function showWords(data){
         `;
         wordsContainer.appendChild(wordElement);
     });
+    if(data.length == 0){
+        const wordElement = document.createElement('div');
+        wordElement.classList.add('word');
+        wordElement.innerHTML = `
+            <h3>No results found :(</h3>
+            <p>forsan et haec olim meminisse iuvabit</p>
+        `;
+        wordsContainer.appendChild(wordElement);
+    
+    }
 }
 
 showWords(parsedData)

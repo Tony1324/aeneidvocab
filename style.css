@@ -10,6 +10,7 @@ html, body{
     line-height: 1.5;
     overflow-x: hidden;
     font-family: 'Libre Baskerville', serif;
+    background-color: #e8e6ed;
 }
 
 h1{
@@ -23,9 +24,11 @@ h3,p{
 
 .word, input{
     padding: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ddd; */
+    border: none;
     margin: 10px;
     border-radius: 5px;
+    background-color: white;
 }
 
 input{
