@@ -44,7 +44,7 @@ adnitor, adniti, adnixus sum ---- to rest on, lean on, support oneself on; to ex
 adnuo, adnuere, adnui, adnutus ---- to beckon, nod; to nod assent; to grant, concede, promise; to approve
 adoro, adorare, adoravi, adoratus ---- to plead with, address; to approach as a supplicant, pray to, worship
 adsum, adesse, adfui, adfuturus ---- to be present, be near
-adsurgo, adsurgere, adsurrexi, adsurrectus, to rise up, be built up
+adsurgo, adsurgere, adsurrexi, adsurrectus ---- to rise up, be built up
 advenio, advenire, adveni, adventurus ---- to reach, arrive (at)
 adversus, adversa, adversum ---- opposite, in/from the opposite direction, facing, opposing, in front of
 adverto, advertere, adverti, adversus ---- to turn toward; to pay attention to, heed
@@ -219,7 +219,7 @@ caedo, caedere, cecidi, caesus ---- to strike, beat; to kill, murder, slay
 caelestis, caelestis, caeleste ---- in the sky, from the sky; celestial, heavenly, divine; (substantive) god, goddess
 caelicola, caelicolae, m./f. ---- inhabitant of heaven, heaven dweller, god, goddess
 caelum, caeli, n. ---- sky, heaven
-caerulus (caeruleus), -a, -um ----, blue;
+caerulus (caeruleus), -a, -um ---- blue;
 Caesar, Caesaris, m. ---- Caesar, emperor
 Calchas, Calchantis, acc. Calchanta, m. ---- Calchas (the leading Greek soothsayer in the Trojan War)
 calidus, calida, calidum ---- warm
@@ -644,7 +644,7 @@ flumen, fluminis, n. ---- river, stream
 fluvius, fluvii, m. ---- stream, river
 foedo, foedare, foedavi, foedatus ---- to make filthy, defile, pollute; to wound, mangle, mutilate
 foedus, foeda, foedum ---- filthy, disgusting
-foedus, foederis, n. agreement, treaty, league; compact, condition, bond
+foedus, foederis, n. ---- agreement, treaty, league; compact, condition, bond
 folium, folii, n. ---- leaf
 fons, fontis, m. ---- spring, fountain, souce; often pl. water (from a spring), waters (of a sea, river)
 for, fari, fatus sum ---- to speak, talk; to speak prophetically; to say, tell
@@ -1835,7 +1835,7 @@ Tyndaris, Tyndaridis, acc. Tyndarida, f. ---- daughter of Tyndareus (king of Spa
 tyrannus, tyranni, m. ---- tyrant, despot
 Tyrius, Tyria, Tyrium ---- Tyrian, of Tyre (a major city on the coast of Phoenicia)
 Tyros, Tyri, f. ---- Tyre (capital of Phoenicia)
-uber, uberis, n. woman's breast; animal's udder; fertile soil; abundant produce
+uber, uberis, n. ---- woman's breast; animal's udder; fertile soil; abundant produce
 ubi ---- adv., where, when
 ubique ---- everywhere
 ulciscor, ulcisci, ultus sum ---- to avenge
@@ -1983,6 +1983,7 @@ const filterWords = (query, isWord) => parsedData.filter(({ word, definition }) 
         if(isWord){
             return word.toLowerCase().includes(query.toLowerCase());
         } else {
+            if(!definition) return false
             return definition.toLowerCase().includes(query.toLowerCase());
         }
     }).sort((a,b) =>{
